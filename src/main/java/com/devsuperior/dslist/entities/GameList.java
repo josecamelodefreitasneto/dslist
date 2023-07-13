@@ -2,7 +2,7 @@ package com.devsuperior.dslist.entities;
 
 import java.util.Objects;
 
-import org.springframework.context.event.EventPublicationInterceptor;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,22 +11,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name= "tb_game_list")
+@Table(name =  "tb_game_list")
 public class GameList {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
+	private String name;
 	
 	public GameList() {
 		
 	}
 
-	public GameList(Long id, String nome) {
+	public GameList(Long id, String name) {
 		super();
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 	}
 
 	public Long getId() {
@@ -37,12 +37,12 @@ public class GameList {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String name) {
+		this.name = name;
 	}
 
 	@Override
